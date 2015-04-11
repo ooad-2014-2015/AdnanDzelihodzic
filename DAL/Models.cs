@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-
-    //Model klasa Uposlenik ->Tabela Uposlenik u bazi podataka
     public class Uposlenik
     {
         public int Id { get; set; }
@@ -23,7 +21,6 @@ namespace DAL
         public int Id {get;set;}
         public DateTime DatumVrijemeDogadjaja {get;set;}
         public int UposlenikId { get; set; }
-
         public virtual Uposlenik Uposlenik { get; set; }
     }
 }

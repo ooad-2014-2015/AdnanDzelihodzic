@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,24 @@ namespace PrimjerRFID
     /// </summary>
     public partial class MainWindow : Window
     {
+        static Baza baza = new Baza();
         public MainWindow()
         {
             InitializeComponent();
+            //pokretanje čitača kartica
+            RFID citac = new RFID();
+            
         }
+
+       
+
+        private void btnUcitaj_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Data.CollectionViewSource uposlenikViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("uposlenikViewSource")));
+            uposlenikViewSource.Source = baza.Uposlenici.ToList();
+        }
+
+       
+
     }
 }

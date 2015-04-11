@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    class Baza:DbContext
+    public class Baza:DbContext
     {
         public Baza() : base("ERV")
         {

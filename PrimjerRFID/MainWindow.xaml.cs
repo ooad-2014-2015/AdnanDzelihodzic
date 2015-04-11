@@ -26,19 +26,12 @@ namespace PrimjerRFID
         {
             InitializeComponent();
             //pokretanje čitača kartica
-            RFID citac = new RFID();
-            
+            RFID citac = new RFID();  
         }
-
-       
-
         private void btnUcitaj_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.Data.CollectionViewSource uposlenikViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("uposlenikViewSource")));
             uposlenikViewSource.Source = baza.Uposlenici.ToList();
         }
-
-       
-
     }
 }
